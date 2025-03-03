@@ -1,66 +1,168 @@
-# Teste Técnico Front-end BeTalent
+<div align="center">
+<h1 style="font-weight: semibold; font-size: 32px;">Tabela de Funcionários</h1>
+<h2 align="center">Made with React.js, Typescript and CSS. ⚛</h2>
+</div>
 
-Este é um repositório para Testes Técnicos em Front-end da Be. Ele é destinado a pessoas que participam de nossos processos seletivos. 
+<p align="center">
+  <a href="#Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Instruções">Instruções</a>
+</p>
 
-Se você chegou até aqui por meio de um formulário de Teste Técnico, siga em frente. Caso contrário, acompanhe a BeTalent no [Linkedin](https://www.linkedin.com/company/betalenttech), [Instagram](https://www.instagram.com/betalent.tech/), [Facebook](https://web.facebook.com/bemobile.tech) ou na nossa newsletter [BeTalent Academy]([https://t.me/be_tech_community](https://beacademy.substack.com/)). Divulgamos novos processos seletivos por lá.
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=04D361&labelColor=281F3D" alt="License" />
+  <img src="https://img.shields.io/github/repo-size/jhonatan-oliveiradev/teste-pratico-frontend?label=repo-size&message=MIT&color=04D361&labelColor=281F3D" alt="Repo Size" />
+  <img src="https://img.shields.io/github/stars/jhonatan-oliveiradev/teste-pratico-frontend?label=stars&message=MIT&color=04D361&labelColor=14061f" alt="Stars" />
+</p>
 
-## Desafio
+## 📖 Sobre o projeto
 
-O Teste Técnico para Front-End da BeTalent consiste em construir a visualização de uma tabela com dados que virão de uma API simulada, em json-server.
+O projeto **Tabela de Funcionários** é uma aplicação web que exibe uma tabela com dados de funcionários, consumindo dados de uma API simulada (`json-server`). A aplicação permite a visualização dos dados em formato de tabela, com colunas para imagem, nome, cargo, data de admissão e telefone, além de oferecer funcionalidade de pesquisa e responsividade para diferentes dispositivos.
 
-### Mockup
+## 💻 Tecnologias utilizadas no projeto
 
-Este é o [projeto em Figma](https://www.figma.com/file/yw6th52zE9bubewc6ayTg5/Teste-T%C3%A9cnico-Front-End-Be.?type=design&node-id=1%3A4&mode=dev&t=vVxs9eyKybrYmq4Z-1) para você se orientar. Nele, você encontrará estilos, visualização desktop e mobile e outros padrões que deverá seguir.
+- [React.js](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite.js](https://vitejs.dev/)
+- [json-server](https://github.com/typicode/json-server)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-### Requisitos Gerais
+## 🌿 Branches
 
-Deve-se utilizar React.js ou Vanilla JS (JavaScript puro) para construir o projeto.
+- `main` projeto finalizado.
 
-É permitido utilizar libs externas, mas recomenda-se que seja o mínimo possível.
+## 🎨 Protótipo do projeto
 
-A visualização deve ser responsiva.
+O protótipo do projeto foi desenvolvido no Figma e você pode visualizá-lo [aqui](https://www.figma.com/design/kAdhqm42472ATkpfVlhMY9/Teste-T%C3%A9cnico-Frontend-BeTalent-(Copy)?node-id=1-4&m=dev).
 
-A tabela deve conter as seguintes colunas:
+## 📝 Licença
 
-- imagem (thumb do/a usuário/a);
-- nome;
-- cargo
-- data de admissão;
-- telefone.
+Este projeto está sob a licença MIT. Consulte a [LICENÇA](./LICENSE) para obter mais informações.
 
-Também deve ser possível realizar pesquisa na tabela por meio de um input. O input de pesquisa deve permitir filtrar dados por cargo, nome e telefone.
+## ️🗄️ Estrutura de pastas
 
-Datas e telefones devem ser formatadas no front-end e não na API.
+O projeto está estruturado da seguinte forma:
 
-Tenha instaladas em sua máquina as ferramentas [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/) (ou outro gerenciador de pacotes de sua preferência) para poder trabalhar no projeto.
+- 📁`public`
+- 📁`src`
+  - 📁`components`
+    - 📁`layout`
+    - ⚛️ `header.tsx`
+    - 📁`shared`
+    - ⚛️ `loading.tsx`
+    - ⚛️ `search-bar.tsx`
+    - ⚛️ `spinner.tsx`
+    - 📁`table`
+    - ⚛️ `employee-table.tsx`
+    - ⚛️ `employee-row.tsx`
+    - ⚛️ `employee-card.tsx`
+  - 📁`hooks`
+    - ⚛️ `use-employee.ts`
+  - 📁`types`
+    - ⚛️ `employee-data.ts`
+  - 📁`utils`
+    - ⚛️ `format-date.ts`
+    - ⚛️ `format-phone.ts`
+  - ⚛️ `App.tsx`
+  - ⚛️ `main.tsx`
+  - `App.css`
+  - `index.css`
+- `index.html`
 
-### Acesso aos dados da API simulada
+## 🛠️ ️Instruções de execução
 
-Para ter acesso aos dados que alimentarão o projeto, faça o seguinte:
+Siga as instruções abaixo para rodar o projeto em seu ambiente local:
 
-1. caso você não tenha, instale o pacote [json-server](https://github.com/typicode/json-server);
-2. clone este repositório do GitHub em sua máquina: [https://github.com/BeMobile/desafio-front-end](https://github.com/BeMobile/desafio-front-end);
-3. entre na pasta do projeto, em sua máquina, e, por meio da linha de comando, execute o comando `json-server --watch db.json`, para consumir a API simulada;
-4. inicie a estrutura e o desenvolvimento do projeto.
+1. Certifique-se de ter o Node.js instalado em seu computador. Você pode baixar a versão mais recente do Node.js [aqui](https://nodejs.org).
 
-É necessário deixar o json-server rodando no terminal para que os dados sejam visualizados no projeto.
+2. Clone este repositório em seu computador ou faça o download do código fonte.
 
-Caso você tenha problemas com o json-server, tente rodá-lo com `npx json-server db.json` ou 
-com `yarn json-server <path>/db.json`, em que `<path>` é o caminho completo até o diretório em que o arquivo db.json está localizado. Se mesmo assim não funcionar, busque ajuda na web.
+```bash
+  git clone https://github.com/jhonatan-oliveiradev/teste-betalent-frontend.git
+```
 
-### Critérios de Avaliação
+3. Abra o terminal e navegue até o diretório raiz do projeto.
 
-Em ordem de relevância, avaliaremos:
+4. Instale as dependências do projeto executando o seguinte comando:
 
-1. lógica de programação;
-2. organização (do código e dos arquivos);
-3. CSS do projeto;
-4. README, que deve conter, pelo menos, as seguintes informações: sobre o projeto, pré-requisitos e instruções para rodar a aplicação.
+```bash
+  npm install
+```
 
-É um diferencial na avaliação o uso de TypeScript.
+5. Após a conclusão da instalação das dependências, inicie o servidor de desenvolvimento local com o comando:
 
-### Envio da Solução
+```bash
+  npm run dev
 
-O projeto deverá ser hospedado em um repositório no seu GitHub. O link do repositório deverá ser fornecido por meio do formulário de Teste Técnico encaminhado ao seu e-mail. Não serão aceitos links de projetos enviados por outros meios.
+  ou
 
-Demais instruções e regras serão instruídas nos formulários e nas comunicações do processo seletivo do qual você está participando.
+  yarn dev
+```
+
+6. O servidor local será iniciado e você poderá acessar o projeto no seu navegador através do seguinte endereço (padrão do Vite):
+
+```bash
+  http://localhost:5173
+```
+
+Caso a porta `5173` esteja em uso, o Vite irá sugerir uma porta alternativa para execução do projeto.
+
+Se desejar alterar a porta padrão do Vite, você pode fazer isso no arquivo `vite.config.ts`:
+
+```ts
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  server: {
+    port: 5173, //alterar aqui
+  },
+});
+```
+
+7. Para iniciar o servidor da API simulada, abra um novo terminal e execute o seguinte comando:
+
+```bash
+  npm run server
+
+  ou
+
+  yarn server
+```
+
+8. O servidor da API será iniciado e você poderá acessar os dados da API através do seguinte endereço:
+
+```bash
+  http://localhost:3333/employees
+```
+
+## 🚀 Deploy
+
+Para realizar o deploy do projeto, você pode seguir as instruções do Vite.js para [deploy de produção](https://vitejs.dev/guide/build.html#production-deployment).
+
+Ou você pode utilizar uma plataforma como a [Vercel](https://vercel.com/) ou [Netlify](https://www.netlify.com/) para realizar o deploy do projeto.
+
+Exemplo de deploy utilizando a Vercel:
+
+1. Acesse o site da [Vercel](https://vercel.com) e crie uma conta.
+
+2. Após criar a conta, clique em "Import Project" e selecione o repositório do projeto.
+
+3. Configure as variáveis de ambiente necessárias para o projeto.
+
+4. Clique em "Deploy" e aguarde o deploy ser finalizado.
+
+Agora você tem o projeto disponível em produção!
+
+## 📝 Melhorias futuras
+
+- [ ] Adicionar funcionalidade de ordenação dos dados da tabela;
+- [ ] Adicionar funcionalidade de paginação;
+- [ ] Adicionar coluna de edição de dados direto da tabela.
+
+<hr>
+
+<div align="center">
+
+Feito com 💜 por [Jhonatan Oliveira](https://jhonatanoliveira.com).
+
+</div>
