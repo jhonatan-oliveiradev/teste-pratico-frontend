@@ -1,0 +1,283 @@
+.app {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	height: 3.75rem;
+	display: flex;
+	align-items: center;
+	padding: 0 16px;
+	border-bottom: 1px solid var(--gray-10);
+	background-color: var(--neutral-white);
+	box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+}
+
+.main-content {
+	padding: 20px;
+	flex: 1;
+	background-color: var(--gray-00);
+}
+
+.title-search-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	font-weight: 500;
+	margin-top: 2.75rem;
+	margin-bottom: 2.75rem;
+}
+
+.search-container {
+	position: relative;
+	width: 100%;
+	max-width: 18.75rem;
+}
+
+.search-input {
+	width: 100%;
+	padding: 12px 16px;
+	background-color: var(--neutral-white);
+	border: 1px solid var(--gray-10);
+	border-radius: 8px;
+	font-size: 16px;
+	outline: none;
+}
+
+.search-button {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: var(--gray-20);
+}
+
+.table-container {
+	background-color: var(--neutral-white);
+	border-radius: 8px;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
+	overflow: hidden;
+}
+
+.employee-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.employee-table th {
+	background-color: var(--primary-color);
+	color: var(--neutral-white);
+	text-align: left;
+	padding: 15px;
+	font-weight: 500;
+}
+
+.employee-table td {
+	padding: 15px;
+	border-bottom: 1px solid var(--gray-00);
+}
+
+.employee-table tr:last-child td {
+	border-bottom: none;
+}
+
+.photo-column {
+	width: 7.5rem;
+}
+
+.photo-cell {
+	text-align: center;
+}
+
+.employee-photo {
+	width: 2.125rem;
+	height: 2.125rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.no-results-message {
+	text-align: center;
+	padding: 20px;
+	background-color: var(--neutral-white);
+}
+
+.loading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+/* SPINNER */
+.spinner {
+	animation: rotate 1.5s linear infinite;
+}
+
+.path {
+	stroke-dasharray: 150;
+	stroke-dashoffset: 0;
+	animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 150;
+	}
+	50% {
+		stroke-dashoffset: 35;
+		stroke-linecap: round;
+	}
+	100% {
+		stroke-dashoffset: 150;
+	}
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	overflow: hidden;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+	.title-search-container {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+	}
+
+	.title {
+		margin-top: 1.5rem;
+		margin-bottom: 0;
+	}
+
+	.search-container {
+		margin-bottom: 1.5rem;
+		max-width: 100%;
+	}
+
+	.desktop-table {
+		display: none;
+	}
+
+	.mobile-employee-list {
+		display: block;
+		background-color: var(--neutral-white);
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.mobile-header {
+		background-color: var(--primary-color);
+		color: var(--neutral-white);
+		padding: 15px;
+		display: flex;
+		justify-content: space-between;
+		font-weight: 500;
+	}
+
+	.mobile-header span:nth-child(2) {
+		flex: 1;
+		margin-left: 2.5rem;
+	}
+
+	.employee-card {
+		background-color: var(--neutral-white);
+		border-bottom: 1px solid var(--gray-10);
+		cursor: pointer;
+	}
+
+	.employee-card:last-child {
+		border-bottom: none;
+	}
+
+	.employee-card-content {
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+
+	.employee-photo-container {
+		margin-right: 12px;
+	}
+
+	.employee-photo {
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.employee-name {
+		flex: 1;
+		font-size: 16px;
+		color: var(--gray-100);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: 3.5rem;
+	}
+
+	.chevron-icon {
+		color: var(--primary-color);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.chevron-icon.active {
+		transform: rotate(90deg);
+	}
+
+	.employee-details {
+		padding: 16px;
+		background-color: var(--gray-00);
+		border-top: 1px solid var(--gray-10);
+	}
+
+	.employee-details p {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 8px;
+	}
+
+	.employee-details p:last-child {
+		margin-bottom: 0;
+	}
+
+	.employee-details strong {
+		font-weight: 500;
+		margin-right: 8px;
+	}
+}
+
+@media (min-width: 769px) {
+	.mobile-employee-list {
+		display: none;
+	}
+
+	.mobile-header {
+		display: none;
+	}
+}
