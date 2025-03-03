@@ -78,7 +78,7 @@ Siga as instruções abaixo para rodar o projeto em seu ambiente local:
 2. Clone este repositório em seu computador ou faça o download do código fonte.
 
 ```bash
-  git clone https://github.com/jhonatan-oliveiradev/teste-betalent-frontend.git
+  git clone https://github.com/jhonatan-oliveiradev/teste-pratico-frontend.git
 ```
 
 3. Abra o terminal e navegue até o diretório raiz do projeto.
